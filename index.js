@@ -12,7 +12,7 @@ $("document").ready(function(){
     //console.log("randomChosenColor "+randomChosenColor);
 
     gamePattern.push(randomChosenColor);
-    console.log(gamePattern);
+    //console.log(gamePattern);
     //console.log("gamePattern.length "+gamePattern.length);
     //for(var i=0;i<gamePattern.length;i++){
     //console.log("gamePattern[i] before timeout function "+gamePattern[i]);
@@ -44,7 +44,7 @@ userClickedPattern=[];
 $(".btn").click(function(){
   var userChosenColor = this.id;
   userClickedPattern.push(userChosenColor);
-  console.log(userClickedPattern);
+  //console.log(userClickedPattern);
 
 
   $("#"+userChosenColor).fadeOut(100).fadeIn(100);
@@ -69,14 +69,14 @@ $(".btn").click(function(){
       //  j--;
         break;}
       }
-      console.log(j);
-      console.log(userClickedPattern.length);
+      //console.log(j);
+      //console.log(userClickedPattern.length);
       if(j===userClickedPattern.length)
         {
           if(j===gamePattern.length){
           setTimeout(function(){
           count++;
-          console.log("calling nextSequence function");
+          //console.log("calling nextSequence function");
           nextSequence();
   },1000)
 }
@@ -106,7 +106,7 @@ $(document).keydown(function(){
   if($("h1").text() === "Game Over, Press Any Key to Restart")
   {
   count = 0;
-  console.log(count);
+  //console.log(count);
   gamePattern = [];
   }
   count++;
